@@ -1,0 +1,17 @@
+7.4520 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [5120, 1440]. Using actual size
+8.0878 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001B9798B0AC0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001B9798B0A60>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001B9798B0790>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001B97ADDC0D0>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([5120, 1440]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+8.0879 	EXP 	window1: mouseVisible = True
+8.0879 	EXP 	window1: backgroundImage = ''
+8.0879 	EXP 	window1: backgroundFit = 'none'
+8.0880 	EXP 	window1: mouseVisible = False
+8.0880 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+8.0880 	EXP 	window1: recordFrameIntervals = False
+8.1709 	EXP 	window1: recordFrameIntervals = True
+8.2627 	EXP 	Screen (0) actual frame rate measured at 120.00Hz
+8.2627 	EXP 	window1: recordFrameIntervals = False
+10.8781 	EXP 	Created selection = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='selection', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+10.9446 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0.0, pos=array([1., 0.]), rgb=UNKNOWN, text='Wie fühlen Sie sich?', units='height', win=Window(...), wrapWidth=1)
+10.9641 	EXP 	selection: autoDraw = True
+10.9641 	EXP 	text: autoDraw = True
+17.0839 	DATA 	Keypress: escape
+17.4725 	EXP 	window1: mouseVisible = True

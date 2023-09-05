@@ -1,0 +1,12 @@
+6.5690 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [5120, 1440]. Using actual size
+7.0770 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000173E9D9FBE0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000173E9D9FB80>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000173E9D9F8B0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000173EB362250>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([5120, 1440]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.0771 	EXP 	window1: mouseVisible = True
+7.0771 	EXP 	window1: backgroundImage = ''
+7.0771 	EXP 	window1: backgroundFit = 'none'
+7.0772 	EXP 	window1: mouseVisible = False
+7.0772 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+7.0772 	EXP 	window1: recordFrameIntervals = False
+7.1600 	EXP 	window1: recordFrameIntervals = True
+7.2524 	EXP 	Screen (0) actual frame rate measured at 119.14Hz
+7.2524 	EXP 	window1: recordFrameIntervals = False
+9.5214 	EXP 	window1: mouseVisible = True

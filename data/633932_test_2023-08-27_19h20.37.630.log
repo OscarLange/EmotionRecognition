@@ -1,0 +1,22 @@
+9.5603 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001E71FFB1880>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001E71FFB1820>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001E71FFB1550>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001E7214AADF0>, multiSample=False, name='window1', numSamples=2, pos=(1600, 180), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+9.5604 	EXP 	window1: mouseVisible = True
+9.5604 	EXP 	window1: backgroundImage = ''
+9.5604 	EXP 	window1: backgroundFit = 'none'
+9.5604 	EXP 	window1: mouseVisible = True
+9.5605 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+9.5605 	EXP 	window1: recordFrameIntervals = False
+9.6426 	EXP 	window1: recordFrameIntervals = True
+9.7344 	EXP 	Screen (0) actual frame rate measured at 120.37Hz
+9.7344 	EXP 	window1: recordFrameIntervals = False
+9.7728 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+12.4111 	EXP 	Created selection = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='selection', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+12.4807 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0.0, pos=array([-0.5,  0. ]), rgb=UNKNOWN, text='Wie finden Sie das Tattoo?', units='norm', win=Window(...), wrapWidth=1)
+12.8108 	EXP 	movie: autoLog = True
+12.8108 	EXP 	movie: autoDraw = True
+17.9368 	EXP 	movie: autoDraw = False
+18.6711 	EXP 	selection: autoDraw = True
+18.6711 	EXP 	text: autoDraw = True
+26.7975 	EXP 	selection: autoDraw = False
+26.7975 	EXP 	text: autoDraw = False
+26.7975 	EXP 	movie: autoDraw = False
+26.8221 	EXP 	window1: mouseVisible = True
