@@ -1,0 +1,64 @@
+8.8880 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001CE4F2E3AC0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001CE4F2E3A60>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001CE4F2E3790>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001CE5091F070>, multiSample=False, name='window1', numSamples=2, pos=(1600, 180), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+8.8881 	EXP 	window1: mouseVisible = True
+8.8881 	EXP 	window1: backgroundImage = ''
+8.8881 	EXP 	window1: backgroundFit = 'none'
+8.8882 	EXP 	window1: mouseVisible = True
+8.8882 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+8.8882 	EXP 	window1: recordFrameIntervals = False
+8.9710 	EXP 	window1: recordFrameIntervals = True
+9.0631 	EXP 	Screen (0) actual frame rate measured at 119.50Hz
+9.0631 	EXP 	window1: recordFrameIntervals = False
+9.1002 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+11.9174 	EXP 	Created selection = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='selection', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1. , 0.9]), texRes=128.0, units='height', win=Window(...))
+11.9845 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0.0, pos=array([-0.65,  0.6 ]), rgb=UNKNOWN, text='Wie finden Sie das Tattoo?', units='norm', win=Window(...), wrapWidth=1)
+12.1595 	EXP 	window1: mouseVisible = True
+12.4996 	EXP 	Created motivation = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-3, fillColor=None, flip=False, font='Open Sans', granularity=1.0, labelColor=None, labelHeight=0.05, labelWrapWidth=None, labels=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), lineColor=None, markerColor=None, name='motivation', opacity=None, ori=0.0, pos=array([ 0.65, -0.8 ]), readOnly=False, self=UNKNOWN, size=array([0.5, 0.1]), startValue=0, style='scrollbar', styleTweaks=[], ticks=ndarray(...), units='norm', win=Window(...))
+12.5245 	EXP 	Created Motivation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='Motivation', opacity=1.0, ori=0.0, pos=array([ 0.65, -0.7 ]), rgb=UNKNOWN, text='Motivation', units='height', win=Window(...), wrapWidth=1)
+12.6068 	EXP 	movie: autoLog = True
+12.6068 	EXP 	motivation: autoLog = True
+12.6068 	EXP 	motivation: markerPos = 0
+12.6068 	EXP 	motivation: styleTweaks = []
+12.6068 	EXP 	motivation: styleTweaks = []
+12.6068 	EXP 	motivation: styleTweaks = []
+12.6068 	EXP 	motivation: styleTweaks = []
+12.6068 	EXP 	motivation: contrast = 1.0
+12.6068 	EXP 	motivation: autoLog = True
+12.6068 	EXP 	motivation: markerPos = None
+12.6068 	EXP 	motivation: markerPos = 0
+17.5511 	EXP 	movie: autoDraw = True
+22.5498 	EXP 	selection: autoDraw = True
+22.5498 	EXP 	motivation: autoDraw = True
+22.5498 	EXP 	Motivation: autoDraw = True
+22.6846 	EXP 	movie: autoDraw = False
+23.0604 	EXP 	text: autoDraw = True
+29.8471 	DATA 	Mouse: Left button down, pos=(1358,109)
+29.8703 	EXP 	motivation: markerPos = 0.29166666666666674
+29.8953 	EXP 	motivation: markerPos = 0.3125
+29.9203 	EXP 	motivation: markerPos = 0.4999999999999999
+29.9454 	EXP 	motivation: markerPos = 0.7708333333333334
+29.9703 	EXP 	motivation: markerPos = 0.7916666666666666
+29.9953 	EXP 	motivation: markerPos = 0.8541666666666681
+30.0203 	EXP 	motivation: markerPos = 0.9583333333333333
+30.0453 	EXP 	motivation: markerPos = 1.145833333333333
+30.0704 	EXP 	motivation: markerPos = 1.25
+30.0953 	EXP 	motivation: markerPos = 1.2916666666666665
+30.1204 	EXP 	motivation: markerPos = 1.2916666666666665
+30.1454 	EXP 	motivation: markerPos = 1.3124999999999987
+30.1704 	EXP 	motivation: markerPos = 1.375
+30.1954 	EXP 	motivation: markerPos = 1.3958333333333335
+30.2204 	EXP 	motivation: markerPos = 1.3958333333333335
+30.2454 	EXP 	motivation: markerPos = 1.3958333333333335
+30.2704 	EXP 	motivation: markerPos = 1.4166666666666665
+30.2954 	EXP 	motivation: markerPos = 1.5000000000000002
+30.3205 	EXP 	motivation: markerPos = 1.5416666666666667
+30.3454 	EXP 	motivation: markerPos = 1.5416666666666667
+30.3704 	EXP 	motivation: markerPos = 1.5416666666666667
+30.3902 	DATA 	Mouse:  Left button up, pos=(1418,101)
+30.3954 	EXP 	motivation: markerPos = 1.5416666666666667
+30.4205 	EXP 	motivation: markerPos = 2.0
+30.5450 	EXP 	selection: autoDraw = False
+30.5450 	EXP 	text: autoDraw = False
+30.5450 	EXP 	movie: autoDraw = False
+30.5450 	EXP 	motivation: autoDraw = False
+30.5450 	EXP 	Motivation: autoDraw = False
+30.5713 	EXP 	window1: mouseVisible = True

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.2),
-    on August 27, 2023, at 19:24
+    on Oktober 02, 2023, at 22:24
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -58,7 +58,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\lange\\Desktop\\FunProjects\\EmotionRecognition\\test_lastrun.py',
+    originPath='C:\\Users\\lange\\Desktop\\FunProjects\\EmotionRecognition2\\test_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -104,26 +104,40 @@ defaultKeyboard = keyboard.Keyboard(backend='iohub')
 selection = visual.ImageStim(
     win=win,
     name='selection', 
-    image='C:/Users/lange/Downloads/FeelingsCircleBig2.gimp.png', mask=None, anchor='center',
-    ori=0.0, pos=(0, 0), size=(0.5, 0.5),
+    image='FeelingsCircleBigText.gimp.png', mask=None, anchor='center',
+    ori=0.0, pos=(0, 0), size=(1, 0.9),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=0.0)
 text = visual.TextStim(win=win, name='text',
-    text='Wie finden Sie das Tattoo?',
+    text='Wie finden Sie das Video?',
     font='Open Sans',
-    units='norm', pos=(-0.5, 0), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
+    units='norm', pos=(-0.65, 0.6), height=0.08, wrapWidth=None, ori=0.0, 
+    color='black', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-1.0);
 movie = visual.MovieStim(
     win, name='movie',
-    filename='C:/Users/lange/Desktop/Tracks/myTattoo_Trim.mp4', movieLib='ffpyplayer',
+    filename='TicTacToe.mp4', movieLib='ffpyplayer',
     loop=False, volume=1.0, noAudio=False,
-    pos=(0, 0), size=(0.5, 0.5), units=win.units,
+    pos=(0, 0), size=(1, 0.8), units=win.units,
     ori=0.0, anchor='center',opacity=None, contrast=1.0,
     depth=-2
 )
+motivation = visual.Slider(win=win, name='motivation',
+    startValue=0, size=(0.5, 0.1), pos=(0.65, -0.8), units='norm',
+    labels=(0 ,1, 2, 3, 4, 5 ,6 ,7 ,8 ,9 ,10), ticks=(0 ,1, 2, 3, 4, 5 ,6 ,7 ,8 ,9 ,10), granularity=1.0,
+    style='scrollbar', styleTweaks=(), opacity=None,
+    labelColor='Black', markerColor='Black', lineColor='White', colorSpace='rgb',
+    font='Open Sans', labelHeight=0.05,
+    flip=False, ori=0.0, depth=-3, readOnly=False)
+Motivation = visual.TextStim(win=win, name='Motivation',
+    text='Motivation',
+    font='Open Sans',
+    units='norm', pos=(0.65, -0.7), height=0.08, wrapWidth=None, ori=0.0, 
+    color='black', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-4.0);
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -132,8 +146,9 @@ routineTimer = core.Clock()  # to track time remaining of each (possibly non-sli
 # --- Prepare to start Routine "trial" ---
 continueRoutine = True
 # update component parameters for each repeat
+motivation.reset()
 # keep track of which components have finished
-trialComponents = [selection, text, movie]
+trialComponents = [selection, text, movie, motivation, Motivation]
 for thisComponent in trialComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -148,7 +163,7 @@ frameN = -1
 
 # --- Run Routine "trial" ---
 routineForceEnded = not continueRoutine
-while continueRoutine and routineTimer.getTime() < 18.5:
+while continueRoutine:
     # get current time
     t = routineTimer.getTime()
     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -192,7 +207,7 @@ while continueRoutine and routineTimer.getTime() < 18.5:
     # *text* updates
     
     # if text is starting this frame...
-    if text.status == NOT_STARTED and tThisFlip >= 10.5-frameTolerance:
+    if text.status == NOT_STARTED and tThisFlip >= 10-frameTolerance:
         # keep track of start time/frame for later
         text.frameNStart = frameN  # exact frame index
         text.tStart = t  # local t and not account for scr refresh
@@ -225,7 +240,7 @@ while continueRoutine and routineTimer.getTime() < 18.5:
     # *movie* updates
     
     # if movie is starting this frame...
-    if movie.status == NOT_STARTED and tThisFlip >= 5.0-frameTolerance:
+    if movie.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
         movie.frameNStart = frameN  # exact frame index
         movie.tStart = t  # local t and not account for scr refresh
@@ -241,7 +256,7 @@ while continueRoutine and routineTimer.getTime() < 18.5:
     # if movie is stopping this frame...
     if movie.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > movie.tStartRefresh + 5.0-frameTolerance:
+        if tThisFlipGlobal > movie.tStartRefresh + 9.0-frameTolerance:
             # keep track of stop time/frame for later
             movie.tStop = t  # not accounting for scr refresh
             movie.frameNStop = frameN  # exact frame index
@@ -251,6 +266,63 @@ while continueRoutine and routineTimer.getTime() < 18.5:
             movie.status = FINISHED
             movie.setAutoDraw(False)
             movie.stop()
+    
+    # *motivation* updates
+    
+    # if motivation is starting this frame...
+    if motivation.status == NOT_STARTED and tThisFlip >= 10.0-frameTolerance:
+        # keep track of start time/frame for later
+        motivation.frameNStart = frameN  # exact frame index
+        motivation.tStart = t  # local t and not account for scr refresh
+        motivation.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(motivation, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'motivation.started')
+        # update status
+        motivation.status = STARTED
+        motivation.setAutoDraw(True)
+    
+    # if motivation is active this frame...
+    if motivation.status == STARTED:
+        # update params
+        pass
+    
+    # Check motivation for response to end routine
+    if motivation.getRating() is not None and motivation.status == STARTED:
+        continueRoutine = False
+    
+    # *Motivation* updates
+    
+    # if Motivation is starting this frame...
+    if Motivation.status == NOT_STARTED and tThisFlip >= 10.0-frameTolerance:
+        # keep track of start time/frame for later
+        Motivation.frameNStart = frameN  # exact frame index
+        Motivation.tStart = t  # local t and not account for scr refresh
+        Motivation.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(Motivation, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'Motivation.started')
+        # update status
+        Motivation.status = STARTED
+        Motivation.setAutoDraw(True)
+    
+    # if Motivation is active this frame...
+    if Motivation.status == STARTED:
+        # update params
+        pass
+    
+    # if Motivation is stopping this frame...
+    if Motivation.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > Motivation.tStartRefresh + 8.0-frameTolerance:
+            # keep track of stop time/frame for later
+            Motivation.tStop = t  # not accounting for scr refresh
+            Motivation.frameNStop = frameN  # exact frame index
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'Motivation.stopped')
+            # update status
+            Motivation.status = FINISHED
+            Motivation.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -277,11 +349,10 @@ for thisComponent in trialComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
 movie.stop()
-# using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-if routineForceEnded:
-    routineTimer.reset()
-else:
-    routineTimer.addTime(-18.500000)
+thisExp.addData('motivation.response', motivation.getRating())
+thisExp.addData('motivation.rt', motivation.getRT())
+# the Routine "trial" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
 
 # --- End experiment ---
 # Flip one final time so any remaining win.callOnFlip() 
