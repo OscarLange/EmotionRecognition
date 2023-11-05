@@ -1,0 +1,57 @@
+7.7790 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000019C81901E20>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000019C81901DC0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000019C81901AC0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000019C87EB1520>, multiSample=False, name='window1', numSamples=2, pos=(1600, 180), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.7791 	EXP 	window1: mouseVisible = True
+7.7791 	EXP 	window1: backgroundImage = ''
+7.7791 	EXP 	window1: backgroundFit = 'none'
+7.7792 	EXP 	window1: mouseVisible = True
+7.7792 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+7.7792 	EXP 	window1: recordFrameIntervals = False
+7.8623 	EXP 	window1: recordFrameIntervals = True
+7.9538 	EXP 	Screen (0) actual frame rate measured at 122.80Hz
+7.9539 	EXP 	window1: recordFrameIntervals = False
+7.9933 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+10.8155 	EXP 	Created selection = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='FeelingsCircleBigText.gimp.png', interpolate=True, mask=None, maskParams=None, name='selection', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1. , 0.9]), texRes=128.0, units='height', win=Window(...))
+10.8841 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0.0, pos=array([-0.65,  0.6 ]), rgb=UNKNOWN, text='Wie finden Sie das Video?', units='norm', win=Window(...), wrapWidth=1)
+11.1046 	EXP 	window1: mouseVisible = True
+11.4604 	EXP 	Created motivation = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-3, fillColor=None, flip=False, font='Open Sans', granularity=1.0, labelColor=None, labelHeight=0.05, labelWrapWidth=None, labels=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), lineColor=None, markerColor=None, name='motivation', opacity=None, ori=0.0, pos=array([ 0.65, -0.8 ]), readOnly=False, self=UNKNOWN, size=array([0.5, 0.1]), startValue=0, style='scrollbar', styleTweaks=[], ticks=ndarray(...), units='norm', win=Window(...))
+11.4671 	EXP 	Created Motivation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='Motivation', opacity=1.0, ori=0.0, pos=array([ 0.65, -0.7 ]), rgb=UNKNOWN, text='Motivation', units='norm', win=Window(...), wrapWidth=1)
+11.4672 	EXP 	window1: mouseVisible = True
+11.6102 	EXP 	movie: autoLog = True
+11.6102 	EXP 	motivation: autoLog = True
+11.6102 	EXP 	motivation: markerPos = 0
+11.6102 	EXP 	motivation: styleTweaks = []
+11.6102 	EXP 	motivation: styleTweaks = []
+11.6102 	EXP 	motivation: styleTweaks = []
+11.6102 	EXP 	motivation: styleTweaks = []
+11.6102 	EXP 	motivation: contrast = 1.0
+11.6102 	EXP 	motivation: autoLog = True
+11.6102 	EXP 	motivation: markerPos = None
+11.6102 	EXP 	motivation: markerPos = 0
+11.6102 	EXP 	movie: autoDraw = True
+20.7228 	EXP 	movie: autoDraw = False
+21.4983 	EXP 	selection: autoDraw = True
+21.4983 	EXP 	text: autoDraw = True
+21.4983 	EXP 	motivation: autoDraw = True
+21.4983 	EXP 	Motivation: autoDraw = True
+23.7420 	DATA 	Mouse: Left button down, pos=(1016,544)
+23.9180 	DATA 	Mouse:  Left button up, pos=(1016,544)
+26.9096 	DATA 	Mouse: Left button down, pos=(1015,905)
+27.0602 	DATA 	Mouse:  Left button up, pos=(1015,905)
+28.0848 	DATA 	Mouse: Left button down, pos=(756,747)
+28.2436 	DATA 	Mouse:  Left button up, pos=(757,751)
+29.5180 	EXP 	selection: autoDraw = False
+29.5180 	EXP 	text: autoDraw = False
+29.5180 	EXP 	Motivation: autoDraw = False
+34.2100 	DATA 	Mouse: Left button down, pos=(1555,116)
+34.2443 	EXP 	motivation: markerPos = 4.395833333333333
+34.2694 	EXP 	motivation: markerPos = 4.395833333333333
+34.2944 	EXP 	motivation: markerPos = 4.395833333333333
+34.3194 	EXP 	motivation: markerPos = 4.395833333333333
+34.3389 	DATA 	Mouse:  Left button up, pos=(1550,113)
+34.3444 	EXP 	motivation: markerPos = 4.333333333333334
+34.3694 	EXP 	motivation: markerPos = 4.0
+34.5027 	EXP 	selection: autoDraw = False
+34.5027 	EXP 	text: autoDraw = False
+34.5027 	EXP 	movie: autoDraw = False
+34.5027 	EXP 	motivation: autoDraw = False
+34.5027 	EXP 	Motivation: autoDraw = False
+34.5516 	EXP 	window1: mouseVisible = True

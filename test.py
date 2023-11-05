@@ -1,8 +1,8 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.2),
-    on Oktober 02, 2023, at 22:30
+    on November 05, 2023, at 16:06
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -32,7 +32,76 @@ import sys  # to get file system encoding
 import psychopy.iohub as io
 from psychopy.hardware import keyboard
 
+circle_middle_x = 0.055
+circle_middle_y = 0.005
+out_circle_rad = 0.375
+out_circle1_rad = 0.3
+out_circle2_rad = 0.24
+out_circle3_rad = 0.17
+out_circle4_rad = 0.1
+inner_circle = 0.04
+pointx = 0.055
+pointy = 0.46
+point1x = 0.44
+point1y = 0.31
+point2x = 0.58
+point2y = -0.11
+point3x = 0.246
+point3y = -0.39
+point4x = -0.13
+point4y = -0.398
+point5x = -0.42
+point5y = -0.103
+point6x = -0.346
+point6y = 0.299
 
+def isInside(circle_x, circle_y, rad, x, y):
+    # Compare radius of circle
+    # with distance of its center
+    # from given point
+    if ((x - circle_x) * (x - circle_x) +
+        (y - circle_y) * (y - circle_y) <= rad * rad):
+        return True
+    else:
+        return False
+
+def isInsideTriangle(x1,y1,x2,y2,x3,y3,xp,yp):
+    c1 = (x2-x1)*(yp-y1)-(y2-y1)*(xp-x1)
+    c2 = (x3-x2)*(yp-y2)-(y3-y2)*(xp-x2)
+    c3 = (x1-x3)*(yp-y3)-(y1-y3)*(xp-x3)
+    return (c1<0 and c2<0 and c3<0) or (c1>0 and c2>0 and c3>0)
+
+def convertMouseInputToEmotion(x,y):
+    if(isInside(circle_middle_x,circle_middle_y,out_circle_rad,x,y)):
+        if(isInside(circle_middle_x,circle_middle_y,inner_circle,x,y)):
+            print("No emotion")
+        elif(isInside(circle_middle_x,circle_middle_y,out_circle4_rad,x,y)):
+            print("Emotion=1")
+        elif(isInside(circle_middle_x,circle_middle_y,out_circle3_rad,x,y)):
+            print("Emotion=2")
+        elif(isInside(circle_middle_x,circle_middle_y,out_circle2_rad,x,y)):
+            print("Emotion=3")
+        elif(isInside(circle_middle_x,circle_middle_y,out_circle1_rad,x,y)):
+            print("Emotion=4")
+        else:
+            print("Emotion=5")
+
+        if(isInsideTriangle(circle_middle_x,circle_middle_y,pointx,pointy,point1x,point1y,x,y)):
+            print("Ueberaschung")
+        elif(isInsideTriangle(circle_middle_x,circle_middle_y,point1x,point1y,point2x,point2y,x,y)):
+            print("Ekel")
+        elif(isInsideTriangle(circle_middle_x,circle_middle_y,point2x,point2y,point3x,point3y,x,y)):
+            print("Trauer")
+        elif(isInsideTriangle(circle_middle_x,circle_middle_y,point3x,point3y,point4x,point4y,x,y)):
+            print("Aerger")
+        elif(isInsideTriangle(circle_middle_x,circle_middle_y,point4x,point4y,point5x,point5y,x,y)):
+            print("Angst")
+        elif(isInsideTriangle(circle_middle_x,circle_middle_y,point5x,point5y,point6x,point6y,x,y)):
+            print("Begeisterung")
+        else:
+            print("Freude")
+    else:
+        print("Outside circle")
 
 # Ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
@@ -58,7 +127,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\lange\\Desktop\\FunProjects\\EmotionRecognition\\test_lastrun.py',
+    originPath='C:\\Users\\lange\\Desktop\\FunProjects\\EmotionRecognition\\test.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -138,6 +207,9 @@ Motivation = visual.TextStim(win=win, name='Motivation',
     color='black', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-4.0);
+mouse = event.Mouse(win=win)
+x, y = [None, None]
+mouse.mouseClock = core.Clock()
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -147,8 +219,16 @@ routineTimer = core.Clock()  # to track time remaining of each (possibly non-sli
 continueRoutine = True
 # update component parameters for each repeat
 motivation.reset()
+# setup some python lists for storing info about the mouse
+mouse.x = []
+mouse.y = []
+mouse.leftButton = []
+mouse.midButton = []
+mouse.rightButton = []
+mouse.time = []
+gotValidClick = False  # until a click is received
 # keep track of which components have finished
-trialComponents = [selection, text, movie, motivation, Motivation]
+trialComponents = [selection, text, movie, motivation, Motivation, mouse]
 for thisComponent in trialComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -323,6 +403,47 @@ while continueRoutine:
             # update status
             Motivation.status = FINISHED
             Motivation.setAutoDraw(False)
+    # *mouse* updates
+    
+    # if mouse is starting this frame...
+    if mouse.status == NOT_STARTED and t >= 10.0-frameTolerance:
+        # keep track of start time/frame for later
+        mouse.frameNStart = frameN  # exact frame index
+        mouse.tStart = t  # local t and not account for scr refresh
+        mouse.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(mouse, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.addData('mouse.started', t)
+        # update status
+        mouse.status = STARTED
+        mouse.mouseClock.reset()
+        prevButtonState = mouse.getPressed()  # if button is down already this ISN'T a new click
+    
+    # if mouse is stopping this frame...
+    if mouse.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > mouse.tStartRefresh + 10.0-frameTolerance:
+            # keep track of stop time/frame for later
+            mouse.tStop = t  # not accounting for scr refresh
+            mouse.frameNStop = frameN  # exact frame index
+            # add timestamp to datafile
+            thisExp.addData('mouse.stopped', t)
+            # update status
+            mouse.status = FINISHED
+    if mouse.status == STARTED:  # only update if started and not finished!
+        buttons = mouse.getPressed()
+        if buttons != prevButtonState:  # button state changed?
+            prevButtonState = buttons
+            if sum(buttons) > 0:  # state changed to a new click
+                x, y = mouse.getPos()
+                convertMouseInputToEmotion(x,y)
+                mouse.x.append(x)
+                mouse.y.append(y)
+                buttons = mouse.getPressed()
+                mouse.leftButton.append(buttons[0])
+                mouse.midButton.append(buttons[1])
+                mouse.rightButton.append(buttons[2])
+                mouse.time.append(mouse.mouseClock.getTime())
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -351,6 +472,14 @@ for thisComponent in trialComponents:
 movie.stop()
 thisExp.addData('motivation.response', motivation.getRating())
 thisExp.addData('motivation.rt', motivation.getRT())
+# store data for thisExp (ExperimentHandler)
+thisExp.addData('mouse.x', mouse.x)
+thisExp.addData('mouse.y', mouse.y)
+thisExp.addData('mouse.leftButton', mouse.leftButton)
+thisExp.addData('mouse.midButton', mouse.midButton)
+thisExp.addData('mouse.rightButton', mouse.rightButton)
+thisExp.addData('mouse.time', mouse.time)
+thisExp.nextEntry()
 # the Routine "trial" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
